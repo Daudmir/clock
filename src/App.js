@@ -1,6 +1,6 @@
 import {Routes, Route} from 'react-router-dom'
-
-import Homepage from './pages/Homepage';
+import Hooks from './Hooks/Hooks'
+import Lifecycle from './Lifecycle/Lifecycle';
 import './App.css';
 
 
@@ -8,11 +8,8 @@ import './App.css';
 function App() {
   return (
     <>
-    <Routes>
-
-        <Route path="/" index element={<Homepage/>}/>
-
-    </Routes>
+    <Hooks />
+    <Lifecycle />
     </>
   );
 }
