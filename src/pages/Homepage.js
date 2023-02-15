@@ -2,6 +2,8 @@ import * as React from 'react'
 import { useState } from 'react';
 
 function Homepage() {
+    const [show, toggleShow] =
+    useState(true);
   const [time, setTime] = React.useState("");
 
   React.useEffect(() => {
@@ -16,9 +18,15 @@ function Homepage() {
 
   return (
     <div className="App">
-      <h1>{time}</h1>
+        <button onClick={() =>
+        toggleShow(!show)}>
+            {show ? "Hide" : "Show"}
+        </button>
+        {show && <h2>{time}</h2>}
     </div>
-  );
+);
 }
+
+
 
 export default Homepage;
